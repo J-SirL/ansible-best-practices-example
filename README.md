@@ -8,7 +8,7 @@ Staging: ansible-playbook -u [username] -i staging site.yml --check
 Production: ansible-playbook -u [username]  -i production site.yml --check
 
 Ansible project structure explained:
-
+```
 |-- README.md
 |-- site.yml
 |-- production                  # inventory file for production servers
@@ -32,6 +32,6 @@ Ansible project structure explained:
 |       |   `-- main.yml
 |       `-- vars
 |           `-- main.yml
-
+```
 
 
