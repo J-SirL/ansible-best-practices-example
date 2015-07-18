@@ -9,8 +9,8 @@ Production: ansible-playbook -u [username]  -i production site.yml --check
 
 Ansible project structure explained:
 ```
-|-- README.md
-|-- site.yml
+|-- README.md                   # This file
+|-- site.yml                    # master playbook
 |-- production                  # inventory file for production servers
 `-- staging                     # inventory file for staging environment
 |-- group_vars/                 # here we assign variables to particular groups 
@@ -19,19 +19,19 @@ Ansible project structure explained:
 |   `-- hostname-example
 |-- filter_plugins/            # if any custom filter plugins, put them here (optional)
 |-- library/                   # if any custom modules, put them here (optional)
-|-- roles/
-|   `-- role-example/
+|-- roles/                     # Here you put the roles you like to use
+|   `-- role-example/         # role created with ansible-galaxy init [your empthy role]
 |       |-- defaults
-|       |   `-- main.yml
+|       |   `-- main.yml    # defaults file for role
 |       |-- handlers
-|       |   `-- main.yml
+|       |   `-- main.yml    # handlers file for the role
 |       |-- meta
-|       |   `-- main.yml
-|       |-- README.md
+|       |   `-- main.yml    # Here you write information about your role
+|       |-- README.md       #  This is the READ.me for the role        
 |       |-- tasks
-|       |   `-- main.yml
+|       |   `-- main.yml    # tasks file for the role
 |       `-- vars
-|           `-- main.yml
+|           `-- main.yml    # vars file for role
 ```
 
 
